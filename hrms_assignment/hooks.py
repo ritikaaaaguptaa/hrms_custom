@@ -154,6 +154,12 @@ fixtures = [
 # 		"on_trash": "method"
 # 	}
 # }
+doc_events = {
+    "Employee": {
+        "on_update": "hrms_assignment.api.on_update_employee"
+    }
+}
+
 
 # Scheduled Tasks
 # ---------------
