@@ -10,6 +10,16 @@ app_license = "mit"
 
 # required_apps = []
 
+fixtures = [
+    {"dt": "Custom Field", "filters": [["name", "in", [
+        "Job Applicant-custom_source_of_application",
+    ]]]},
+    {"dt": "Workflow", "filters": [["document_type", "in", ["Job Applicant"]]]},
+    {"dt": "Report", "filters": [["ref_doctype", "in", ["Job Applicant"]]]},
+    {"dt": "Dashboard Chart", "filters": [["document_type", "=", "Job Applicant"]]},
+    {"dt": "Dashboard", "filters": [["title", "in", ["HR Dashboard"]]]}
+]
+
 # Each item in the list will be shown as an app in the apps page
 # add_to_apps_screen = [
 # 	{

@@ -1,0 +1,52 @@
+[
+ {
+  "add_total_row": 0,
+  "add_translate_data": 0,
+  "columns": [],
+  "disabled": 0,
+  "docstatus": 0,
+  "doctype": "Report",
+  "filters": [],
+  "is_standard": "No",
+  "javascript": null,
+  "json": null,
+  "letter_head": null,
+  "modified": "2025-08-27 12:12:53.509010",
+  "module": "HR",
+  "name": "Applicants by Source Report",
+  "prepared_report": 0,
+  "query": "SELECT\n  custom_source_of_application AS source,\n  COUNT(*) AS total\nFROM `tabJob Applicant`\nGROUP BY custom_source_of_application\nORDER BY total DESC\n",
+  "ref_doctype": "Job Applicant",
+  "reference_report": null,
+  "report_name": "Applicants by Source Report",
+  "report_script": null,
+  "report_type": "Query Report",
+  "roles": [
+   {
+    "parent": "Applicants by Source Report",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "HR User"
+   },
+   {
+    "parent": "Applicants by Source Report",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "Interviewer"
+   },
+   {
+    "parent": "Applicants by Source Report",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "Hiring Manager"
+   },
+   {
+    "parent": "Applicants by Source Report",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "HR Manager"
+   }
+  ],
+  "timeout": 0
+ }
+]
